@@ -1,0 +1,101 @@
+/* Form container */
+form {
+  margin: auto;
+  max-width: 400px; /* Increased maximum width for better responsiveness */
+  padding: 20px;
+  text-align: center;
+  background-color: #bcbcbc; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  background-size: cover; /* Scale the background image to cover the entire container */
+}
+
+/* Form labels */
+label {
+  display: block;
+  margin-bottom: 10px; /* Increased margin for better separation */
+  font-weight: bold;
+  text-align: left; /* Align labels to the left */
+}
+
+
+/* Table container */
+.table-container {
+  margin: auto;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  padding: 100px;
+  background-color: #fff; /* White background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Margin below the table */
+}
+
+/* Table header */
+th {
+  background-color: #e1dfdf; /* Light gray background color */
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table body rows */
+tr {
+  border-bottom: 3px solid #ddd; /* Bottom border for each row */
+}
+
+/* Table body cells */
+td {
+  padding: 12px;
+}
+
+/* Table body cells for actions (e.g., edit, delete) */
+td.actions {
+  text-align: center;
+}
+
+/* Table hover effect */
+tr:hover {
+  background-color: #f9f9f9; /* Lighter gray background color on hover */
+}
+
+
+/* Form input fields */
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='email'],
+select,
+input[type='date'],
+textarea {
+  width: calc(100% - 20px); /* Adjusted width */
+  padding: 12px;
+  margin-bottom: 15px; /* Increased margin bottom for better spacing */
+  border: 1px solid #6e6c6c;
+  border-radius: 6px; /* Slightly rounded corners */
+  box-sizing: border-box;
+}
+
+.logoutButton {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #d32f2f;
+}
+
+.logoutButton:focus {
+  outline: none;
+}
