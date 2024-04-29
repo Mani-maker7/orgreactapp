@@ -34,26 +34,24 @@ export default function FacultyNavBar() {
         <br />
         <br />
         <br />
-        <ul>
-          <li>
+        <ul> 
+          <li> 
             <Link to="/facultyhome">Home</Link>
-          </li>
-          <li><Link to="/changefacultypwd">Change Password</Link></li>
-          <li className={isDropdownOpen ? 'dropdown active' : 'dropdown'} onClick={toggleDropdown}>
-            <span>
-              Course Contains <i className={isDropdownOpen ? 'arrow up' : 'arrow down'}></i>
-            </span>
-            <div className="dropdown-content">
+          </li> <br /><br /><br />
+          <li><Link to="/changefacultypwd">Change Password</Link></li> <br /><br /><br /> 
+          <li className="dropdown">  
+            <Link>CourseContains </Link>
+            <div className="dropdown-content"> 
               <Link to="/postattendance">Attendance</Link>
               <Link to="/viewgrade">View Grades</Link>
-            </div>
+            </div >  <br /><br /><br />
             </li>
-          <li className="dropdown">
+          <li className="dropdown"> 
             <Link>Assignments</Link>
             <div className="dropdown-content">
                  <Link to="/postassignment">Add Assignments</Link>
                  <Link to="/viewassignments">View Assignments</Link>
-            </div>
+            </div> <br /><br /><br />
           </li>
           
 
