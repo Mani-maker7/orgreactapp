@@ -23,10 +23,6 @@ export default function FacultyNavBar() {
     window.location.reload();
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
   return (
     <div style={{ display: 'flex' }}>
       <nav className="navbar">
@@ -34,34 +30,35 @@ export default function FacultyNavBar() {
         <br />
         <br />
         <br />
-        <ul> 
-          <li> 
+        <ul>
+          <li>
             <Link to="/facultyhome">Home</Link>
-          </li> <br /><br /><br />
-          <li><Link to="/changefacultypwd">Change Password</Link></li> <br /><br /><br /> 
-          <li className="dropdown">  
-            <Link>CourseContains </Link>
-            <div className="dropdown-content"> 
+          </li>
+          <li><Link to="/changefacultypwd">Change Password</Link></li>
+          <li className={isDropdownOpen ? 'dropdown active' : 'dropdown'} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            <span>
+              Course Contains <i className={isDropdownOpen ? 'arrow up' : 'arrow down'}></i>
+            </span>
+            <div className="dropdown-content">
               <Link to="/postattendance">Attendance</Link>
               <Link to="/viewgrade">View Grades</Link>
-            </div >  <br /><br /><br />
-            </li>
-          <li className="dropdown"> 
-            <Link>Assignments</Link>
-            <div className="dropdown-content">
-                 <Link to="/postassignment">Add Assignments</Link>
-                 <Link to="/viewassignments">View Assignments</Link>
-            </div> <br /><br /><br />
+            </div>
           </li>
-          
-
+          <li className="dropdown">
+            <Link to="/postassignment">Assignments</Link>
+            <div className="dropdown-content">
+              <Link to="/postassignment">Add Assignments</Link>
+              <Link to="/viewassignments">View Assignments</Link>
+            </div>
+          </li>
           <li className="dropdown">
             <Link to="/facultyprofile">Profile</Link>
             <div className="dropdown-content">
               <Link to="/facultyprofile">View Profile</Link>
               <Link to="/updatefacultyprofile">Update Profile</Link>
             </div>
-          </li>   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         
           <li>
             <button className="logoutButton" onClick={handleLogout}>
