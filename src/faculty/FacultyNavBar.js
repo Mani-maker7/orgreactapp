@@ -23,10 +23,6 @@ export default function FacultyNavBar() {
     window.location.reload();
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
   return (
     <div style={{ display: 'flex' }}>
       <nav className="navbar">
@@ -39,7 +35,7 @@ export default function FacultyNavBar() {
             <Link to="/facultyhome">Home</Link>
           </li>
           <li><Link to="/changefacultypwd">Change Password</Link></li>
-          <li className={isDropdownOpen ? 'dropdown active' : 'dropdown'} onClick={toggleDropdown}>
+          <li className={isDropdownOpen ? 'dropdown active' : 'dropdown'} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <span>
               Course Contains <i className={isDropdownOpen ? 'arrow up' : 'arrow down'}></i>
             </span>
@@ -47,23 +43,22 @@ export default function FacultyNavBar() {
               <Link to="/postattendance">Attendance</Link>
               <Link to="/viewgrade">View Grades</Link>
             </div>
-            </li>
+          </li>
           <li className="dropdown">
-            <Link>Assignments</Link>
+            <Link to="/postassignment">Assignments</Link>
             <div className="dropdown-content">
-                 <Link to="/postassignment">Add Assignments</Link>
-                 <Link to="/viewassignments">View Assignments</Link>
+              <Link to="/postassignment">Add Assignments</Link>
+              <Link to="/viewassignments">View Assignments</Link>
             </div>
           </li>
-          
-
           <li className="dropdown">
             <Link to="/facultyprofile">Profile</Link>
             <div className="dropdown-content">
               <Link to="/facultyprofile">View Profile</Link>
               <Link to="/updatefacultyprofile">Update Profile</Link>
             </div>
-          </li>   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         
           <li>
             <button className="logoutButton" onClick={handleLogout}>

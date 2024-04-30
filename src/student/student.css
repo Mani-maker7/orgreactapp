@@ -29,10 +29,7 @@ ul, ol {
     padding: 10px 20px;
   }
   
-  .navbar li:hover {
-    background-color: #555;
-    cursor: pointer;
-  }
+  
   
   .content-container {
     flex: 1;

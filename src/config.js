@@ -1,6 +1,6 @@
 const config = 
 {
-    url : "http://localhost:2527"
+    url : "https://backendapp-msno.onrender.com"
 };
 
 export default config;
