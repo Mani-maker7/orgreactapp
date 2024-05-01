@@ -1,4 +1,4 @@
 [[redirects]]
-from="/adminhome"
-to = "/adminlogin"
+from="/*"
+to = "/index.html"
 status = 200
