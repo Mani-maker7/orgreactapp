@@ -1,4 +1,4 @@
 [[redirects]]
-from="/*"
-to = "/adminlogin.js"
+from="/adminhome"
+to = "/"
 status = 200
